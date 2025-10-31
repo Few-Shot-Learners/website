@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Instrument_Serif } from 'next/font/google'
 import './globals.css'
-import Navigation from '@/components/Navigation'
+import ThemeToggle from '@/components/ThemeToggle'
 
 const instrumentSerif = Instrument_Serif({
   weight: ['400'],
@@ -20,9 +20,27 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const theme = localStorage.getItem('theme');
+                const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                const finalTheme = theme || systemTheme;
+                if (finalTheme === 'dark') {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className={`${instrumentSerif.variable} font-sans`}>
-        <Navigation />
+        <ThemeToggle />
         {children}
       </body>
     </html>

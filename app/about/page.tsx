@@ -1,6 +1,11 @@
+import Link from 'next/link'
+
 export default function About() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-16">
+      <Link href="/" className="inline-block mb-8 hover:opacity-60 transition-opacity">
+        ← Back
+      </Link>
       <h1 className="font-serif text-5xl mb-12 text-center">About</h1>
 
       <div className="space-y-12">
@@ -21,20 +26,20 @@ export default function About() {
         </section>
 
         {/* Team */}
-        <section className="border-t border-gray-300 pt-12">
+        <section className="border-t border-gray-300 dark:border-gray-700 pt-12">
           <h2 className="font-serif text-3xl mb-8">Team</h2>
 
           <div className="space-y-8">
             {/* Sid */}
-            <div className="border-b border-gray-200 pb-8">
+            <div className="border-b border-gray-200 dark:border-gray-800 pb-8">
               <h3 className="font-serif text-2xl mb-3">Sid</h3>
-              <p className="text-gray-600 italic">Placeholder for bio</p>
+              <p className="text-gray-600 dark:text-gray-400 italic">Placeholder for bio</p>
             </div>
 
             {/* Akshay */}
-            <div className="border-b border-gray-200 pb-8">
+            <div className="border-b border-gray-200 dark:border-gray-800 pb-8">
               <h3 className="font-serif text-2xl mb-3">Akshay</h3>
-              <p className="text-gray-600 italic">Placeholder for bio</p>
+              <p className="text-gray-600 dark:text-gray-400 italic">Placeholder for bio</p>
             </div>
           </div>
         </section>
