@@ -94,7 +94,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
       .use(rehypeKatex)
       .use(rehypeStringify)
       .process(content)
-    const contentHtml = processedContent.toString()
+    const contentHtml = String(processedContent)
 
     return {
       slug,

@@ -11,3 +11,40 @@ body {
   @apply bg-white text-black antialiased;
   @apply dark:bg-black dark:text-white;
 }
+
+/* Ensure prose headers are styled correctly - using !important to override any conflicting styles */
+.prose h1,
+.prose h1.prose-h1 {
+  font-size: 2.25rem !important;
+  font-weight: 700 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.2 !important;
+}
+
+.prose h2,
+.prose h2.prose-h2 {
+  font-size: 1.875rem !important;
+  font-weight: 600 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.3 !important;
+}
+
+.prose h3,
+.prose h3.prose-h3 {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+  line-height: 1.4 !important;
+}
+
+.prose h4,
+.prose h4.prose-h4 {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
+  line-height: 1.5 !important;
+}
