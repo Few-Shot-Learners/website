@@ -3,7 +3,7 @@ title: "An Intuitive Guide to Optimizers"
 date: "2025-11-28"
 category: "Training"
 author: "Few Shot Learners"
-excerpt: "A comprehensive introduction to the attention mechanism"
+excerpt: "A comprehensive introduction to classic optimizers"
 ---
 
 ## Introduction
