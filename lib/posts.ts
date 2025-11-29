@@ -2,7 +2,10 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
-import html from 'remark-html'
+import remarkMath from 'remark-math'
+import remarkRehype from 'remark-rehype'
+import rehypeKatex from 'rehype-katex'
+import rehypeStringify from 'rehype-stringify'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
@@ -84,8 +87,13 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
 
-    // Convert markdown to HTML
-    const processedContent = await remark().use(html).process(content)
+    // Convert markdown to HTML with math support
+    const processedContent = await remark()
+      .use(remarkMath)
+      .use(remarkRehype)
+      .use(rehypeKatex)
+      .use(rehypeStringify)
+      .process(content)
     const contentHtml = processedContent.toString()
 
     return {

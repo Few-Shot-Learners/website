@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Instrument_Serif } from 'next/font/google'
 import './globals.css'
+import 'katex/dist/katex.min.css'
 import ThemeToggle from '@/components/ThemeToggle'
 
 const instrumentSerif = Instrument_Serif({

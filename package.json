@@ -22,11 +22,16 @@
   "homepage": "https://github.com/Few-Shot-Learners/website#readme",
   "dependencies": {
     "gray-matter": "^4.0.3",
+    "katex": "^0.16.25",
     "next": "^16.0.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "rehype-katex": "^7.0.1",
+    "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",
-    "remark-html": "^16.0.1"
+    "remark-html": "^16.0.1",
+    "remark-math": "^6.0.0",
+    "remark-rehype": "^11.1.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.16",
