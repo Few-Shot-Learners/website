@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Few-Shot-Learners/website#readme",
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.19",
     "gray-matter": "^4.0.3",
     "katex": "^0.16.25",
     "next": "^16.0.1",
